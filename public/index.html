@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CineTogether – Dosto ke saath movies</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AC%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><span class="logo" id="home">🎬 CineTogether</span><input type="text" id="q" placeholder="Movie dhundo…"><span class="sp"></span><span class="tag" id="rt"></span></header>
+
+<section id="homev">
+  <div class="hero"><h1>Dosto ke saath ek hi movie, ek hi time par</h1><p>Movie chuno, room banao, dost ko code bhejo. Play, pause aur seek sabke liye sync, saath me voice aur chat.</p><button class="btn pri" id="hadd">＋ Apni movie add karo</button></div>
+  <h2>Movies</h2><div class="grid" id="grid"></div>
+</section>
+
+<main id="watch">
+  <div>
+    <div class="title"><button class="btn" id="back">← Wapas</button><b id="wt"></b></div>
+    <div class="stage"><video id="v" controls playsinline></video><video id="sv" autoplay playsinline controls style="display:none;position:absolute;inset:0"></video>
+      <div id="ov"><div id="ovt"></div><button class="btn pri" id="ovb">Apni device se file chuno</button></div></div>
+    <p class="tag">Har dost apni device par wahi movie file kholta hai. File upload nahi hoti, sirf play/pause/seek sync hota hai.</p>
+  </div>
+  <aside>
+    <div class="box" id="joinbox"><h3>Room</h3><div class="col">
+      <input type="text" id="nm" placeholder="Tumhara naam" maxlength="20">
+      <input type="text" id="rc" placeholder="Room code (jaise: friday-night)" maxlength="30">
+      <button class="btn pri" id="go">Dosto ke saath judo</button><span class="tag" id="err"></span></div></div>
+    <div class="box" id="roombox" style="display:none"><h3>Dost (<span id="pc">0</span>)</h3><div id="peers"></div>
+      <button class="btn" id="mic" style="width:100%;margin-top:6px">🎙️ Voice chalu karo</button><button class="btn" id="share" style="width:100%;margin-top:6px">🖥️ Screen share karo</button><div id="audios"></div></div>
+    <div class="box"><h3>Chat</h3><div id="log"></div><div class="send"><input type="text" id="ci" placeholder="Kuch likho…" maxlength="300"><button class="btn pri" id="cs">Bhejo</button></div></div>
+  </aside>
+</main>
+<input type="file" id="pick" accept="video/*,.mkv" hidden>
+
+<script src="room.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "cinetogether",
+  "version": "1.0.0",
+  "description": "Dosto ke saath movie dekhne ki website: synced player, voice, chat, screen share",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "ws": "^8.18.0" }
+}
